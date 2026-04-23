@@ -73,98 +73,112 @@ function buildEmail(guest) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${CONFIG.subject}</title>
 </head>
-<body style="margin:0;padding:0;background:#0E0604;font-family:Georgia,'Times New Roman',serif;">
+<body style="margin:0;padding:0;background:#F5E6A3;font-family:Georgia,'Times New Roman',serif;">
 
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#0E0604;padding:48px 16px;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#F5E6A3;padding:48px 16px;">
 <tr><td align="center">
 
-  <table width="520" cellpadding="0" cellspacing="0"
-         style="background:#1C0C06;border:1px solid #8B6A2A;border-radius:3px;max-width:520px;width:100%;">
+  <table width="560" cellpadding="0" cellspacing="0"
+         style="background:#FFFDF4;border:2px solid #C8A456;border-radius:6px;max-width:560px;width:100%;box-shadow:0 4px 24px rgba(107,29,42,0.12);">
 
-    <!-- Gold bar top -->
-    <tr><td height="3" style="background:linear-gradient(90deg,#6B4A18,#C8A456,#D4B060,#C8A456,#6B4A18);"></td></tr>
+    <!-- Gold & Maroon bar top -->
+    <tr><td height="5" style="background:linear-gradient(90deg,#6B1D2A,#C8A456,#D4B060,#C8A456,#6B1D2A);"></td></tr>
+
+    <!-- Decorative maroon accent strip -->
+    <tr><td height="2" style="background:#6B1D2A;"></td></tr>
+
+    <!-- L&A Logo header -->
+    <tr>
+      <td align="center" style="padding:36px 40px 12px;">
+        <img src="https://lukespiteri.github.io/wedding-invite/logo.png"
+             alt="L&A" width="90" height="90"
+             style="width:90px;height:auto;">
+      </td>
+    </tr>
 
     <!-- Names header -->
     <tr>
-      <td align="center" style="padding:44px 40px 20px;">
-        <p style="margin:0 0 14px;color:#C8A456;font-size:10px;letter-spacing:7px;text-transform:uppercase;">
-          Together with their families
-        </p>
-        <p style="margin:0;color:#F5EDD8;font-size:30px;font-weight:normal;letter-spacing:1px;">
+      <td align="center" style="padding:8px 40px 20px;">
+        <p style="margin:0;color:#6B1D2A;font-size:28px;font-weight:normal;letter-spacing:1px;font-style:italic;">
           Luke Charles Spiteri
         </p>
-        <p style="margin:6px 0;color:#C8A456;font-size:34px;font-weight:normal;">&amp;</p>
-        <p style="margin:0;color:#F5EDD8;font-size:30px;font-weight:normal;letter-spacing:1px;">
+        <p style="margin:6px 0;color:#C8A456;font-size:32px;font-weight:normal;">&amp;</p>
+        <p style="margin:0;color:#6B1D2A;font-size:28px;font-weight:normal;letter-spacing:1px;font-style:italic;">
           Ayten Kotb Harby
         </p>
       </td>
     </tr>
 
-    <!-- Divider -->
+    <!-- Gold divider -->
     <tr>
-      <td align="center" style="padding:0 40px 0;">
-        <table width="60" cellpadding="0" cellspacing="0">
-          <tr><td height="1" style="background:#C8A456;"></td></tr>
+      <td align="center" style="padding:4px 40px 8px;">
+        <table width="100" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="38" height="1" style="background:linear-gradient(90deg,transparent,#C8A456);"></td>
+            <td width="24" align="center" style="color:#C8A456;font-size:10px;line-height:1;">✦</td>
+            <td width="38" height="1" style="background:linear-gradient(90deg,#C8A456,transparent);"></td>
+          </tr>
         </table>
       </td>
     </tr>
 
-    <!-- Personal greeting & message -->
+    <!-- Personal greeting -->
     <tr>
-      <td style="padding:28px 44px 8px;color:#D4B896;font-size:17px;font-style:italic;text-align:center;">
+      <td style="padding:24px 48px 8px;color:#6B1D2A;font-size:19px;font-style:italic;text-align:center;">
         Dear ${guest.name},
       </td>
     </tr>
+
+    <!-- Message paragraphs -->
     <tr>
-      <td style="padding:8px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
-        We would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.
+      <td style="padding:8px 48px 8px;color:#5A4632;font-size:14px;line-height:1.9;text-align:center;">
+        We would be absolutely honoured to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.
       </td>
     </tr>
     <tr>
-      <td style="padding:12px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+      <td style="padding:12px 48px 8px;color:#5A4632;font-size:14px;line-height:1.9;text-align:center;">
         We are keeping this ceremony as an intimate gathering. Since our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.
       </td>
     </tr>
     <tr>
-      <td style="padding:12px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+      <td style="padding:12px 48px 8px;color:#5A4632;font-size:14px;line-height:1.9;text-align:center;">
         While we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!
       </td>
     </tr>
     <tr>
-      <td style="padding:12px 44px 24px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+      <td style="padding:12px 48px 20px;color:#5A4632;font-size:14px;line-height:1.9;text-align:center;">
         Upon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.
       </td>
     </tr>
 
     <!-- Excitement -->
     <tr>
-      <td style="padding:12px 44px 12px;color:#D4B896;font-size:15px;font-style:italic;text-align:center;">
+      <td style="padding:8px 48px 16px;color:#6B1D2A;font-size:16px;font-style:italic;text-align:center;font-weight:bold;">
         We are so excited and hope you can join us!
       </td>
     </tr>
 
-    <!-- Divider -->
+    <!-- Gold divider -->
     <tr>
       <td align="center" style="padding:0 40px 24px;">
-        <table width="60" cellpadding="0" cellspacing="0">
-          <tr><td height="1" style="background:#C8A456;"></td></tr>
+        <table width="100" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="38" height="1" style="background:linear-gradient(90deg,transparent,#C8A456);"></td>
+            <td width="24" align="center" style="color:#C8A456;font-size:10px;line-height:1;">✦</td>
+            <td width="38" height="1" style="background:linear-gradient(90deg,#C8A456,transparent);"></td>
+          </tr>
         </table>
       </td>
     </tr>
 
     <!-- Invitation CTA -->
     <tr>
-      <td style="padding:0 44px 16px;color:#A89878;font-size:14px;text-align:center;line-height:1.8;">
-        Click the link to experience the invitation:
-      </td>
-    </tr>
-    <tr>
-      <td align="center" style="padding:0 40px 28px;">
+      <td align="center" style="padding:0 40px 20px;">
         <a href="${url}"
-           style="display:inline-block;padding:14px 44px;border:1px solid #C8A456;
-                  color:#C8A456;font-family:Georgia,serif;font-size:11px;
+           style="display:inline-block;padding:14px 44px;border:2px solid #6B1D2A;
+                  color:#6B1D2A;font-family:Georgia,serif;font-size:11px;
                   letter-spacing:5px;text-transform:uppercase;text-decoration:none;
-                  border-radius:2px;">
+                  border-radius:3px;">
           Open Your Invitation
         </a>
       </td>
@@ -174,10 +188,10 @@ function buildEmail(guest) {
     <tr>
       <td align="center" style="padding:0 40px 32px;">
         <a href="https://forms.gle/SmGZT9ihgRDvha988"
-           style="display:inline-block;padding:14px 44px;background:#C8A456;
-                  color:#1C0C06;font-family:Georgia,serif;font-size:11px;
+           style="display:inline-block;padding:14px 44px;background:#6B1D2A;
+                  color:#F5E6A3;font-family:Georgia,serif;font-size:11px;
                   letter-spacing:5px;text-transform:uppercase;text-decoration:none;
-                  border-radius:2px;font-weight:bold;">
+                  border-radius:3px;font-weight:bold;">
           RSVP Here
         </a>
       </td>
@@ -185,30 +199,37 @@ function buildEmail(guest) {
 
     <!-- Sign-off -->
     <tr>
-      <td style="padding:0 44px 40px;color:#C8A456;font-size:14px;text-align:center;letter-spacing:1px;">
-        With love,<br>
-        <span style="font-size:18px;font-style:italic;">Luke and Ayten</span>
+      <td style="padding:0 48px 8px;color:#5A4632;font-size:14px;text-align:center;letter-spacing:1px;">
+        With love,
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0 48px 28px;color:#6B1D2A;font-size:22px;font-style:italic;text-align:center;letter-spacing:1px;">
+        Luke and Ayten
       </td>
     </tr>
 
-    <!-- L&A Logo -->
+    <!-- L&A Logo footer -->
     <tr>
       <td align="center" style="padding:0 40px 32px;">
         <img src="https://lukespiteri.github.io/wedding-invite/logo.png"
-             alt="L&A" width="120" height="120"
-             style="width:120px;height:auto;opacity:0.85;">
+             alt="L&A" width="100" height="100"
+             style="width:100px;height:auto;opacity:0.9;">
       </td>
     </tr>
 
-    <!-- Gold bar bottom -->
-    <tr><td height="3" style="background:linear-gradient(90deg,#6B4A18,#C8A456,#D4B060,#C8A456,#6B4A18);"></td></tr>
+    <!-- Maroon accent strip -->
+    <tr><td height="2" style="background:#6B1D2A;"></td></tr>
+
+    <!-- Gold & Maroon bar bottom -->
+    <tr><td height="5" style="background:linear-gradient(90deg,#6B1D2A,#C8A456,#D4B060,#C8A456,#6B1D2A);"></td></tr>
 
   </table>
 
   <!-- Fallback link -->
-  <p style="margin:16px 0 0;color:#3A2A18;font-size:11px;font-family:Georgia,serif;">
+  <p style="margin:16px 0 0;color:#6B1D2A;font-size:11px;font-family:Georgia,serif;">
     If the button doesn't work:
-    <a href="${url}" style="color:#6B4A18;">${url}</a>
+    <a href="${url}" style="color:#C8A456;">${url}</a>
   </p>
 
 </td></tr>
@@ -222,7 +243,7 @@ function buildEmail(guest) {
     subject: CONFIG.subject,
     html,
     // Plain-text fallback
-    text: `Dear ${guest.name},\n\nWe would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.\n\nWe are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.\n\nWhile we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!\n\nUpon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.\n\nWe are so excited and hope you can join us!\n\nOpen your invitation: ${url}\n\nRSVP here: https://forms.gle/SmGZT9ihgRDvha988\n\nWith love,\nLuke and Ayten`,
+    text: `Dear ${guest.name},\n\nWe would be absolutely honoured to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.\n\nWe are keeping this ceremony as an intimate gathering. Since our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.\n\nWhile we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!\n\nUpon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.\n\nWe are so excited and hope you can join us!\n\nClick the link to experience the invitation: ${url}\n\nRSVP here: https://forms.gle/SmGZT9ihgRDvha988\n\nWith love,\nLuke and Ayten`,
   };
 }
 
