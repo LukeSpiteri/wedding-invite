@@ -136,6 +136,13 @@ function buildEmail(guest) {
       </td>
     </tr>
 
+    <!-- Excitement -->
+    <tr>
+      <td style="padding:12px 44px 12px;color:#D4B896;font-size:15px;font-style:italic;text-align:center;">
+        We are so excited and hope you can join us!
+      </td>
+    </tr>
+
     <!-- Divider -->
     <tr>
       <td align="center" style="padding:0 40px 24px;">
@@ -145,9 +152,14 @@ function buildEmail(guest) {
       </td>
     </tr>
 
-    <!-- CTA -->
+    <!-- Invitation CTA -->
     <tr>
-      <td align="center" style="padding:0 40px 32px;">
+      <td style="padding:0 44px 16px;color:#A89878;font-size:14px;text-align:center;line-height:1.8;">
+        Click the link to experience the invitation:
+      </td>
+    </tr>
+    <tr>
+      <td align="center" style="padding:0 40px 28px;">
         <a href="${url}"
            style="display:inline-block;padding:14px 44px;border:1px solid #C8A456;
                   color:#C8A456;font-family:Georgia,serif;font-size:11px;
@@ -155,22 +167,36 @@ function buildEmail(guest) {
                   border-radius:2px;">
           Open Your Invitation
         </a>
-        <p style="margin:20px 0 0;color:#5A4A30;font-size:11px;letter-spacing:2px;">
-          RSVP BY 5 &bull; 15 &bull; 26
-        </p>
       </td>
     </tr>
 
-    <!-- Excitement & sign-off -->
+    <!-- RSVP CTA -->
     <tr>
-      <td style="padding:0 44px 12px;color:#D4B896;font-size:15px;font-style:italic;text-align:center;">
-        We are so excited and hope you can join us!
+      <td align="center" style="padding:0 40px 32px;">
+        <a href="https://forms.gle/SmGZT9ihgRDvha988"
+           style="display:inline-block;padding:14px 44px;background:#C8A456;
+                  color:#1C0C06;font-family:Georgia,serif;font-size:11px;
+                  letter-spacing:5px;text-transform:uppercase;text-decoration:none;
+                  border-radius:2px;font-weight:bold;">
+          RSVP Here
+        </a>
       </td>
     </tr>
+
+    <!-- Sign-off -->
     <tr>
       <td style="padding:0 44px 40px;color:#C8A456;font-size:14px;text-align:center;letter-spacing:1px;">
         With love,<br>
         <span style="font-size:18px;font-style:italic;">Luke and Ayten</span>
+      </td>
+    </tr>
+
+    <!-- L&A Logo -->
+    <tr>
+      <td align="center" style="padding:0 40px 32px;">
+        <img src="https://lukespiteri.github.io/wedding-invite/logo.png"
+             alt="L&A" width="120" height="120"
+             style="width:120px;height:auto;opacity:0.85;">
       </td>
     </tr>
 
@@ -196,7 +222,7 @@ function buildEmail(guest) {
     subject: CONFIG.subject,
     html,
     // Plain-text fallback
-    text: `Dear ${guest.name},\n\nWe would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.\n\nWe are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.\n\nWhile we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!\n\nUpon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.\n\nOpen your invitation: ${url}\n\nRSVP by 5 • 15 • 26\n\nWe are so excited and hope you can join us!\n\nWith love,\nLuke and Ayten`,
+    text: `Dear ${guest.name},\n\nWe would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.\n\nWe are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.\n\nWhile we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!\n\nUpon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.\n\nWe are so excited and hope you can join us!\n\nOpen your invitation: ${url}\n\nRSVP here: https://forms.gle/SmGZT9ihgRDvha988\n\nWith love,\nLuke and Ayten`,
   };
 }
 
