@@ -122,7 +122,7 @@ function buildEmail(guest) {
     </tr>
     <tr>
       <td style="padding:12px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
-        We are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.
+        We are keeping this ceremony as an intimate gathering. Since our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.
       </td>
     </tr>
     <tr>
