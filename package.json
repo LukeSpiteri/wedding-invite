@@ -1,0 +1,12 @@
+{
+  "name": "wedding-invites",
+  "version": "1.0.0",
+  "description": "Wedding invitation email sender — Luke & Ayten",
+  "scripts": {
+    "send": "node send-invites.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.9",
+    "xlsx": "^0.18.5"
+  }
+}
