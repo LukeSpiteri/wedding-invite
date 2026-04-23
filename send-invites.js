@@ -17,20 +17,20 @@ const fs         = require('fs');
 // ─────────────────────────────────────────────────────────────────────────────
 const CONFIG = {
   // Full URL where invite.html is hosted (GitHub Pages, Netlify, etc.)
-  inviteBaseUrl: 'https://YOUR_SITE_URL/invite.html',
+  inviteBaseUrl: 'https://lukespiteri.github.io/wedding-invite/invite.html',
 
   smtp: {
     host: 'smtp.gmail.com',
     port: 587,
     secure: false,
     auth: {
-      user: 'YOUR_GMAIL@gmail.com',
-      pass: 'YOUR_GMAIL_APP_PASSWORD',  // Generate at myaccount.google.com > Security > App Passwords
+      user: 'lukeayten@gmail.com',
+      pass: 'mwsj icay yuaw phxz',
     },
   },
 
   fromName:  'Luke & Ayten',
-  fromEmail: 'YOUR_GMAIL@gmail.com',
+  fromEmail: 'lukeayten@gmail.com',
   subject:   "You're Invited — Luke & Ayten's Wedding",
 
   // Delay between emails (ms) — avoids Gmail rate limits
@@ -109,51 +109,45 @@ function buildEmail(guest) {
       </td>
     </tr>
 
-    <!-- Personal greeting -->
+    <!-- Personal greeting & message -->
     <tr>
-      <td style="padding:28px 44px 8px;color:#D4B896;font-size:15px;font-style:italic;text-align:center;">
+      <td style="padding:28px 44px 8px;color:#D4B896;font-size:17px;font-style:italic;text-align:center;">
         Dear ${guest.name},
       </td>
     </tr>
     <tr>
-      <td style="padding:8px 44px 24px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
-        We joyfully request the honour of your presence<br>
-        as we celebrate our marriage.
+      <td style="padding:8px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+        We would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:12px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+        We are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:12px 44px 8px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+        While we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:12px 44px 24px;color:#A89878;font-size:14px;line-height:1.8;text-align:center;">
+        Upon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.
       </td>
     </tr>
 
-    <!-- Details block -->
+    <!-- Divider -->
     <tr>
-      <td align="center" style="padding:0 44px 32px;">
-        <table cellpadding="0" cellspacing="0">
-          <tr>
-            <td style="padding:0 24px 0 0;text-align:center;vertical-align:top;">
-              <p style="margin:0 0 5px;color:#C8A456;font-size:9px;letter-spacing:4px;text-transform:uppercase;">Date</p>
-              <p style="margin:0;color:#F5EDD8;font-size:16px;font-style:italic;">8 &bull; 8 &bull; 26</p>
-            </td>
-            <td width="1" style="background:#4A3A20;">&nbsp;</td>
-            <td style="padding:0 0 0 24px;text-align:center;vertical-align:top;">
-              <p style="margin:0 0 5px;color:#C8A456;font-size:9px;letter-spacing:4px;text-transform:uppercase;">Time</p>
-              <p style="margin:0;color:#F5EDD8;font-size:16px;font-style:italic;">2:00 — 5:00 PM</p>
-            </td>
-          </tr>
-          <tr><td colspan="3" height="20"></td></tr>
-          <tr>
-            <td colspan="3" style="text-align:center;">
-              <p style="margin:0 0 5px;color:#C8A456;font-size:9px;letter-spacing:4px;text-transform:uppercase;">Venue</p>
-              <p style="margin:0;color:#F5EDD8;font-size:17px;">Oakview Terrace</p>
-              <p style="margin:4px 0 0;color:#8A7A60;font-size:13px;font-style:italic;">
-                13256 Leslie St, Richmond Hill, ON L4E 1A2
-              </p>
-            </td>
-          </tr>
+      <td align="center" style="padding:0 40px 24px;">
+        <table width="60" cellpadding="0" cellspacing="0">
+          <tr><td height="1" style="background:#C8A456;"></td></tr>
         </table>
       </td>
     </tr>
 
     <!-- CTA -->
     <tr>
-      <td align="center" style="padding:0 40px 44px;">
+      <td align="center" style="padding:0 40px 32px;">
         <a href="${url}"
            style="display:inline-block;padding:14px 44px;border:1px solid #C8A456;
                   color:#C8A456;font-family:Georgia,serif;font-size:11px;
@@ -164,6 +158,19 @@ function buildEmail(guest) {
         <p style="margin:20px 0 0;color:#5A4A30;font-size:11px;letter-spacing:2px;">
           RSVP BY 5 &bull; 15 &bull; 26
         </p>
+      </td>
+    </tr>
+
+    <!-- Excitement & sign-off -->
+    <tr>
+      <td style="padding:0 44px 12px;color:#D4B896;font-size:15px;font-style:italic;text-align:center;">
+        We are so excited and hope you can join us!
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0 44px 40px;color:#C8A456;font-size:14px;text-align:center;letter-spacing:1px;">
+        With love,<br>
+        <span style="font-size:18px;font-style:italic;">Luke and Ayten</span>
       </td>
     </tr>
 
@@ -189,7 +196,7 @@ function buildEmail(guest) {
     subject: CONFIG.subject,
     html,
     // Plain-text fallback
-    text: `Dear ${guest.name},\n\nLuke Charles Spiteri & Ayten Kotb Harby request the honour of your presence at their wedding.\n\n8 • 8 • 26, 2:00–5:00 PM\nOakview Terrace, 13256 Leslie St, Richmond Hill, ON\n\nOpen your invitation: ${url}\n\nRSVP by 5 • 15 • 26`,
+    text: `Dear ${guest.name},\n\nWe would be absolutely honored to have you join us for our wedding ceremony this summer. Please click the link below to view our formal invitation.\n\nWe are keeping this ceremony as an intimate gathering. Because our guest list is quite limited, we kindly ask that you RSVP at your earliest convenience to help us finalize our arrangements.\n\nWhile we are thrilled to share this special milestone with you now, we also look forward to celebrating with everyone at our larger reception, which will be held at a later date in 2027. A separate invitation for the reception will follow down the road!\n\nUpon receiving your RSVP, we will send a follow-up email closer to the date with more detailed information about the ceremony.\n\nOpen your invitation: ${url}\n\nRSVP by 5 • 15 • 26\n\nWe are so excited and hope you can join us!\n\nWith love,\nLuke and Ayten`,
   };
 }
 
